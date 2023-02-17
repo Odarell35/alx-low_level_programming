@@ -21,7 +21,7 @@ int main(void)
 			c = 48;
 			while (c < 58)
 			{
-				if (b != i && b != c && i != c && b < a && a < c)
+				if (b != a && b != c && a != c && b < a && a < c)
 				{
 					putchar(a);
 					putchar(b);
@@ -37,5 +37,9 @@ int main(void)
 			}
 			a++;
 		}
-		b++;
+		b++;	
+
 	}
+	putchar('\n');
+	return (0);
+}
