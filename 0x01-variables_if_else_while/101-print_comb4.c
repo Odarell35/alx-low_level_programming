@@ -37,7 +37,7 @@ int main(void)
 			}
 			a++;
 		}
-		b++;	
+		b++;
 
 	}
 	putchar('\n');
