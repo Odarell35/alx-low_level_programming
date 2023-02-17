@@ -1,9 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-
-/*  main - Determines either greater than 5, is less than 6, or is 0 */
+/**
+ * main - Determines either greater than 5, is less than 6, or is 0
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int n, l_digit;
