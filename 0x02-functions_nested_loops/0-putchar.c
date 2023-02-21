@@ -1,6 +1,6 @@
 #include<stdio.h>
 /*
- *  a program that prints _putchar.
+ * main- a program that prints _putchar.
  */
 
 int main(void)
