@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * print_numbers-  prints the numbers, from 0 to 9, followed by a new line.
- *
+ * print_most_numbers - prints numbers between 0 to 9
+ * (neither 2 nor 4).
+ * Return: no return.
  * Return: Always 0 (success)
  */
 
-void print_numbers(void)
+void print_most_numbers(void)
 {
         int i;
 
