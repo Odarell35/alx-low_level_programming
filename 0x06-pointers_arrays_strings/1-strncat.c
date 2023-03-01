@@ -2,7 +2,7 @@
 
 /**
  * _strncat - concatenates two strings with certain number of characters
- * @ dest: destination string
+ * @dest: destination string
  * @src: source string
  * @n: number of characters
  * Return: dest
@@ -15,16 +15,16 @@ char *_strncat(char *dest, char *src, int n)
 
 	i = 0;
 	length_dest = 0;
-	while (dest[i] !='\0')
+	while (dest[i] != '\0')
 	{
 		length_dest++;
 		i++;
 	}
 	n = 0;
-	for (i= 0; i < n && src[i] != '\0'; i++)
+	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
 		dest[length_dest + i] = src[i];
-		dest[length_dest + i ] = '\0';
+		dest[length_dest + i] = '\0';
 	}
 return (dest);
 }
