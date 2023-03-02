@@ -12,7 +12,7 @@ char *cap_string(char *s)
 	char separators[] = {9, 10, 32, 34, 40, 41, 44, 46, 59, 63, 123, 125};
 
 	i = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		if (s[i] >= 97 && s[i] <= 122)
 			s[i] = s[i] - 32;
