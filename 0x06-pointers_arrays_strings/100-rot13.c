@@ -19,8 +19,10 @@ char *rot13(char *s)
 		for (i = 0; i < 52; i++)
 		{
 			if (s[s_index] == alphabet[i])
+			{
 				s[s_index] = rot13[i];
 					break;
+			}
 		}
 		s_index++;
 	}
