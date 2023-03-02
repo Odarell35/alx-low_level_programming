@@ -22,10 +22,10 @@ char *_strncat(char *dest, char *src, int n)
 		i++;
 	}
 
-	for (src_index = 0; src_index < n && src[src_index] != '\0'; i++)
+	for (src_index = 0; src_index < n && src[src_index] != '\0'; src_index++)
 	{
-		dest[length_dest + i] = src[src_index];
-		dest[length_dest + i] = '\0';
+		dest[length_dest + src_index] = src[src_index];
+		dest[length_dest + src_index] = '\0';
 		break;
 	}
 return (dest);
