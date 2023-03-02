@@ -2,9 +2,9 @@
 
 /**
  * string_toupper -  changes all lowercase letters of a string to uppercase
+ *@a: string
  *
- *
- * Return: char *
+ * Return: a
  */
 char *string_toupper(char *a)
 {
@@ -14,10 +14,9 @@ char *string_toupper(char *a)
 	{
 		if (a[i] >= 97 && a[i] <= 122)
 		{
-			
+
 			a[i] = a[i] - 32;
 		}
-	
 	}
 return (a);
 }
