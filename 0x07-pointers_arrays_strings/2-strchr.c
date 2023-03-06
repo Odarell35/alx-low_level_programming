@@ -10,13 +10,14 @@ char *_strchr(char *s, char c)
 {
 	int i;
 	int length_string;
+	int l;
 
 	length_string = 0;
-	i = 0;
-	while (s[i] != '\0')
+	l = 0;
+	while (s[l] != '\0')
 	{
 		length_string++;
-			i++;
+			l++;
 	}
 	for (i = 0; i < length_string; i++)
 		if (s[i] == c)
