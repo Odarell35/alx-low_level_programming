@@ -33,7 +33,6 @@ unsigned int _strspn(char *s, char *accept)
 		for (ai = 0; ai < length_accept; ai++)
 			if (accept[ai] == s[si])
 			{
-				break;
 				length_prefix++;
 			}
 	}
