@@ -21,10 +21,10 @@ char *_strchr(char *s, char c)
 			l++;
 	}
 	for (i = 0; i < length_string; i++)
+	{	
 		if (s[i] == c)
-			break;
-return (s);
-if (s[i] != c)
+			return (s + i);
+	}
 return (NULL);
 }
 
