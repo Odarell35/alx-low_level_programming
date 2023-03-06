@@ -11,7 +11,7 @@ char *_strchr(char *s, char c)
 	int i;
 	int length_string;
 	int l;
-	c[ ] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPRSTUVWXYZ"
+	/*c[53] ="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPRSTUVWXYZ";*/
 
 	length_string = 0;
 	l = 0;
@@ -21,7 +21,7 @@ char *_strchr(char *s, char c)
 			l++;
 	}
 	for (i = 0; i < length_string; i++)
-		if (s[i] == c[i])
+		if (s[i] == c)
 			break;
 return (s);
 	if (s[i] != c)
