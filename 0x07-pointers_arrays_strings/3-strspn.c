@@ -30,11 +30,16 @@ unsigned int _strspn(char *s, char *accept)
 	}
 	for (si = 0; si < length_s; si++)
 	{
+		unsigned int match = 0;
+
 		for (ai = 0; ai < length_accept; ai++)
 			if (accept[ai] == s[si])
 			{
 				length_prefix++;
+				match = 1;
 			}
+		if (match == 0)
+			return (length_prefix);
 	}
 return (length_prefix);
 }
