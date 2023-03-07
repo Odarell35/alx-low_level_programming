@@ -3,8 +3,8 @@
 /**
  * _strstr -  a function that locates a substring.
  * @haystack: sting to be scanned
- * @needle: string to look for 
- * Return: -*haystack or NULL for no match
+ * @needle: string to look for
+ * * Return: -*haystack or NULL for no match
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -19,9 +19,7 @@ char *_strstr(char *haystack, char *needle)
 				break;
 			}
 		}
-	
-	
-	return (haystack + i);
+		return (haystack + i);
 	}
 return (NULL);
 }
