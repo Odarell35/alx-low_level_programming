@@ -9,18 +9,17 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	int length_string;
+	/*int length_string;
 	int l;
-	/*c[53] ="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPRSTUVWXYZ";*/
-
+	
 	length_string = 0;
 	l = 0;
 	while (s[l] != '\0')
 	{
 		length_string++;
 			l++;
-	}
-	for (i = 0; i < length_string; i++)
+	}*/
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
 			return (s + i);
