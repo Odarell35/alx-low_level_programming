@@ -24,8 +24,12 @@ char *str_concat(char *s1, char *s2)
 	{
 		len_s2++;
 	}
+	if (s1 == NULL || s2 == NULL)
+		s1 = s2 = "";
+
 	if (*s1 == '\0' && *s2 == '\0')
 		return (NULL);
+
 	new_array = malloc((len_s1 + len_s2 + 1) * sizeof(char));
 
 	for (k = 0; k < (len_s1 + len_s2); k++)
