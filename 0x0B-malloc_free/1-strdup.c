@@ -13,6 +13,8 @@ char *_strdup(char *str)
 
 	len_str = 0;
 	i = 0;
+	if (str == NULL)
+		return (NULL);
 
 	while (*str != '\0')
 	{
@@ -24,7 +26,7 @@ char *_strdup(char *str)
 		new_array[i] = str[i];
 	return (new_array);
 
-	if (str == NULL)
+	if (new_array == NULL)
 	return (NULL);
 free(new_array);
 }
