@@ -41,7 +41,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		concat_str[j] = s1[j];
 		s1++;
-	}
+
 	if (n > len_s2)
 	{
 		n = len_s2;
@@ -50,6 +50,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		concat_str[len_s1 + 1] = s2[j];
 		s2++;
+	}
 	}
 	return (concat_str);
 }
