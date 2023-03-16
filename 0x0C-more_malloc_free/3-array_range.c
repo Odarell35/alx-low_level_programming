@@ -20,11 +20,9 @@ int *array_range(int min, int max)
 	if (range == NULL)
 		return (NULL);
 
-	if (max > min)
-		for (i = 0; i <= num_len; i++)
+	for (i = 0; i <= num_len; i++)
 		{
-			range[i] = min;
-			min++;
+			range[i] = min++;
 		}
 	return (range);
 }
