@@ -7,8 +7,7 @@
  * @s2: string 2
  * @n: number of bytes to concatenate from s2
  * Return: pointer or NULL on failure
- *
- */
+  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, j, length, len_s1, len_s2;
@@ -43,9 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1++;
 
 	if (n > len_s2)
-	{
-		n = len_s2;
-	}
+	{ n = len_s2; }
 	for (j = 0; j < n; j++)
 	{
 		concat_str[len_s1 + 1] = s2[j];
