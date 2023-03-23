@@ -7,7 +7,7 @@
  *@n: is  number of strings passed to the function
  *If separator is NULL, don’t print it
  *If one of the string is NULL, print (nil) instead
- *Return: strings, 
+ *Return: strings
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
