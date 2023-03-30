@@ -12,8 +12,8 @@ list_t *temp;
 
 while ((temp = head) != 0)
 {
-	temp = temp->next;
+	head = head->next;
 free(temp->str);
-}
 free(temp);
+}
 }
