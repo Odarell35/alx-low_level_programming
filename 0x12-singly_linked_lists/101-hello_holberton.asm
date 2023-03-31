@@ -1,19 +1,15 @@
-section .data
-    message db 'Hello, Holberton', 0Ah ; message to be printed
+SECTION .data
+msg:	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
-section .text
-    global _start
+	SECTION .text
+	extern printf
+	global main
+main:
+	mov esi, msg
+	mov edi, fmt
+	mov eax, 0
+	call printf
 
-_start:
-    ; write message to stdout
-    mov eax, 4      ; syscall write
-    mov ebx, 1      ; file descriptor stdout
-    mov ecx, message    ; message to be printed
-    mov edx, 16     ; message length
-    int 0x80        ; call kernel
-
-    ; exit program
-    mov eax, 1      ; syscall exit
-    xor ebx, ebx    ; return code 0
-    int 0x80        ; call kernel
-
+	mov eax, 0
+	ret
