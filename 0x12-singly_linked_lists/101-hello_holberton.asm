@@ -3,8 +3,8 @@ section .data
     format db "%s", 10, 0
 section .text
 extern printf
-    global _start
-    
+global _start
+
 _start:
     ; print the message
     mov esi, message
