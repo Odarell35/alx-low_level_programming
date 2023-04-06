@@ -39,14 +39,15 @@ double power(double base, int exponent)
     {
         return (0);
     }
+    converted_number = 0;
     n = 0;
-    for (i = 0; *b != '\0'; i++)
+    for (i = 0; b[i] != '\0'; i++)
     {
-        if (*b == '0')
+        if (b[i] == '0')
         {
             converted_number = converted_number + 0;
         }
-        else if (*b == '1')
+        else if (b[i] == '1')
         {
             converted_number = converted_number + power(2, n);
         }
