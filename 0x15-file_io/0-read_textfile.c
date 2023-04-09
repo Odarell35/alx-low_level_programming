@@ -31,7 +31,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
        }
      while ((read_result = fread(text, 1, letters, filename_pointer)) > 0)
      {   
-        write(STDOUT_FILENO, text, read_result);
+        fwrite(0, text, read_result);
         number_letters = number_letters + read_result;
      }
     free(text);
