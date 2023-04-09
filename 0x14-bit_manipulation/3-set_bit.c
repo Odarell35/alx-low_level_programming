@@ -1,19 +1,33 @@
 #include "main.h"
 /**
- * set_bit - sets the value of a bit to 1 at a given index.
- * @n: pointer to number
+ * get_bit - returns the value of a bit at a given index
+ * @n: number
  * @index: index, starting at 0
- * Return: 1 if it worked, or -1 if an error occurred
- */
-int set_bit(unsigned long int *n, unsigned int index)
+ * Return: the value of the bit at index index or -1 if an error occurred
+*/
+int get_bit(unsigned long int n, unsigned int index)
 {
-    unsigned long int set = 1;
+unsigned long int i;
+unsigned long int *bit_arr;
+int k;
 
-    if (index >= sizeof(unsigned long int) * 8) {
-        return (-1); 
-    }
+bit_arr = NULL;
+k = -1;
+i = 0;
+bit_arr = malloc(sizeof(unsigned long int) * 64);
+if (bit_arr == NULL)
+return (-1);
 
-    set <<= index; 
-    *n = *n | set; 
-    return (1); 
+while (n > 0)
+{
+bit_arr[i] = n & 1;
+n >>= 1;
+i++;
+}
+
+if (index < i)
+k = bit_arr[index];
+
+free(bit_arr);
+return (k);
 }
