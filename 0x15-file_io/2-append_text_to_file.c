@@ -5,34 +5,30 @@
  * @text_content: text to append
  * Return: 1 success, -1 failure
 */
-int append_text_to_file(const char *filename, char *text_content) 
+int append_text_to_file(const char *filename, char *text_content)
 {
-    int file_d;
-    int length;
+	int file_d;
+	int length;
 
-    if (filename == NULL) 
-    {
-        return -1;
-    }
+	if (filename == NULL)
+	{
+		return (-1);
+	}
 
-    file_d = open(filename, O_WRONLY | O_APPEND);
-    if (file_d == -1) 
-    {
-        return -1;
-    }
-
-
-    if (text_content != NULL) 
-    {
-        length = 0;
-        while (text_content[length] != '\0') 
-        {
-            length++;
-        }
-
-        write(file_d, text_content, length);
-    }
-
-    close(file_d);
-    return 1;
+	file_d = open(filename, O_WRONLY | O_APPEND);
+	if (file_d == -1)
+	{
+		return (-1);
+	}
+	if (text_content != NULL)
+	{
+	length = 0;
+	while (text_content[length] != '\0')
+	{
+		length++;
+	}
+	write(file_d, text_content, length);
+	}
+	close(file_d);
+return (1);
 }
