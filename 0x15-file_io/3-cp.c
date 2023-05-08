@@ -15,7 +15,7 @@ char temp[BUFFER_SIZE];
 file_from_fd = open(file_from, O_RDONLY);
 file_to_fd = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 nread = read(file_from_fd, temp, BUFFER_SIZE);
-while (nread > 0) 
+while (nread > 0)
 {
 nwrite = write(file_to_fd, temp, nread);
 if (nwrite == -1)
@@ -40,7 +40,7 @@ exit(100);
 }
 
 /**
- * main - check the code 
+ * main - check the code
  * @argc: number of arguments.
  * @argv: arguments vector.
  * Return: Always 0.
@@ -56,7 +56,6 @@ nwrite = 0;
 close_file = 0;
 file_to_fd = 0;
 file_from_fd = 0;
-
 if (argc != 3)
 {
 dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
@@ -68,25 +67,21 @@ if (file_from_fd == -1)
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 exit(98);
 }
-
 if (file_to_fd == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 exit(99);
 }
-
 if (nwrite != nread)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 exit(99);
 }
-
 if (nread == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 exit(98);
 }
-
 if (close_file == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't close fd %ld\n", file_from_fd);
