@@ -14,7 +14,7 @@ ssize_t number_letters;
 ssize_t read_result;
 
 number_letters = 0;
-open_file = fopen("filename", O_RDONLY);
+open_file = open("filename", O_RDONLY);
 text = malloc(sizeof(char) * (letters + 1));
 
 if (filename == NULL)
@@ -22,7 +22,7 @@ if (filename == NULL)
 return (0);
 }
 
-if (filename_pointer == NULL)
+if (open_file < 0)
 {
 return (0);
 }
