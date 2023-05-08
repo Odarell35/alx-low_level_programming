@@ -21,6 +21,10 @@ if (filename == NULL)
 {
 return (0);
 }
+if (letters == 0)
+{
+	return (0);
+}
 
 if (open_file < 0)
 {
@@ -35,6 +39,10 @@ while ((read_result = read(open_file, text, letters) > 0))
 {
 write(STDOUT_FILENO, text, read_result);
 number_letters = number_letters + read_result;
+}
+if (read_result < 0)
+{
+	return (0);
 }
 close(open_file);
 free(text);
