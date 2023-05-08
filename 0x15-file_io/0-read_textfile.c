@@ -14,7 +14,7 @@ ssize_t number_letters;
 ssize_t read_result;
 
 number_letters = 0;
-open_file = open("filename", O_RDONLY);
+open_file = open(filename, O_RDWR);
 text = malloc(sizeof(char) * (letters + 1));
 
 if (filename == NULL)
@@ -36,8 +36,7 @@ while ((read_result = read(open_file, text, letters) > 0))
 write(STDOUT_FILENO, text, read_result);
 number_letters = number_letters + read_result;
 }
-free(text);
 close(open_file);
-
+free(text);
 return (number_letters);
 }
